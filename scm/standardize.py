@@ -5,7 +5,17 @@ dictionaries={
         {
         # NB Entries should be unique!
         'tot_precip':'total_precip',
+        'qcl':'q_l',
+        #'wstar':'wstar',
+        # Dimensions - these should be consistent below
+        'seconds':'time', 
         }
+    }
+
+dim_dicts={
+    'time':{'units':'s',
+            'UM_SCM': {'mname':'seconds', 'rescale':1},
+            },
     }
 
 global reverse_dict
@@ -36,6 +46,15 @@ def model_name(var_s, model='UM_SCM'):
         var=var_s
     return var
     
+def model_dim(var_s, model='UM_SCM'):
+    if var_s in dim_dictskeys():
+        var=dim_dicts[var_s][model]['mname']
+        rescale=dim_dicts[var_s][model]['rescale']
+    else:
+        var=var_s
+        rescale=1
+    return var, rescale
+
     
 def standardize_names(var_list, model='UM_SCM'):
     var_list_s=[]
