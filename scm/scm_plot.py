@@ -1,3 +1,4 @@
+''' This is where we read in the scm data and do some plotting. '''
 
 import netCDF4
 import standardize

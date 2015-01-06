@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 
+''' This module summarizes the UM SCM runs that are available and stores there
+associated files and location
+Only runids which are added in the scm_log.py will be summarized.
+'''
+
 import os.path
 import imp
 import pylab

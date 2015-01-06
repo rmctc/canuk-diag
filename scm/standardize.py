@@ -1,4 +1,7 @@
-''' A few functions which help to standardize variable names and unit conventions.'''
+'''
+ Here we put a few utility functions  which help to standardize 
+ variable names and unit conventions.
+'''
 
 dictionaries={
     'UM_SCM':
