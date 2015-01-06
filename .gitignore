@@ -1,0 +1,4 @@
+*.pyc
+*~
+scm/config/user_config.py
+
